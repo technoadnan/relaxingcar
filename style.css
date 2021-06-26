@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  overflow-y: hidden;
+}
+
+section {
+  height: 60vh;
+}
+.night {
+  height: 80vh;
+  width: 90vw;
+  /*border: 1px solid black;*/
+  margin: 2.2rem auto;
+  background: url('./images/background.png');
+  background-size: cover;
+  position: relative;
+  box-shadow: 48px -18px 160px rgb(0 0 0 / 70%);
+  overflow-x: hidden;
+}
+
+.surface {
+  height: 140px;
+  width: 5303%;
+  background: url('./images/road.png');
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  background-repeat: repeat-x;
+  animation: moveRight 6s linear infinite;
+}
+.car {
+  position: absolute;
+  bottom: 40px;
+  left: 24%;
+  animation: stop 1s linear infinite;
+}
+
+.night .time {
+color: white;
+    font-weight: 700;
+    font-family: monospace;
+    padding: 10px;
+    font-size: 1.3rem;
+    float: left;
+}
+
+.night .meter {
+    color: white;
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 1.3rem;
+    float: right;
+    position: static;
+    margin: 2rem;
+}
+
+.p {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 0.6rem;
+  font-size: 2rem;
+}
+
+.p span {
+  color: #e2ffd0;
+}
+footer {
+      display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    margin-top: 0.8rem;
+    letter-spacing: 1.2px;
+}
+
+footer a {
+  color: #7ccaca;
+
+}
+
+footer a :hover {
+  color: orange;
+}
+/* animation */
+
+@keyframes moveRight {
+  100%{
+  transform: translateX(-2950px);
+  }
+}
+
+@keyframes stop {
+  100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  0% {
+    transform: translateY(-1px);
+  }
+}
+
+/* responsiveness */
+
+@media only screen and (max-width: 850px) {
+  .night {
+    margin: 1.1rem auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+  }
+  .p {
+  font-size: 1.2rem;
+  }
+}
+
